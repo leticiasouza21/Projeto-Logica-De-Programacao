@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+int pegarProdutoPorCodigo(int codigo, Produto produtos[], int tam) {
+    for(int i = 0; i < tam; i++) {
+        if(produtos[i].codigo == codigo) {
+            return i;
+        }
+    }
+    printf("Produto não encontrado.\n");
+    return -1; 
+}
+
+
 int cadastrarProduto(Produto produto[], int tamanhoProduto){
 
     for(int i=0; i>tamanhoProduto; i++){
